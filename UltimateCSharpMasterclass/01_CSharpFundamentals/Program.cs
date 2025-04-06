@@ -101,3 +101,28 @@ else
 }
 Console.WriteLine("Your choice is: " + userInput);
 
+
+//Methods - part 1 - void methods
+
+void PrintSelectedOption(string selectedOption)
+{
+    Console.WriteLine("Selected option: " + selectedOption);
+}
+
+//Methods - part 2 - non-void methods
+
+int Add(int a, int b)
+{
+    return a + b;
+}
+
+bool IsLong(string input)
+{
+    return input.Length > 10;
+}
+
+//Parsing a string to an int
+
+string numberAsText = "123";
+int parsedToInt = int.Parse(numberAsText); 
+
