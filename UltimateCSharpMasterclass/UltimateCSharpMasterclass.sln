@@ -1,9 +1,11 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
-VisualStudioVersion = 17.13.35913.81 d17.13
+VisualStudioVersion = 17.13.35913.81
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "01_CSharpFundamentals", "01_CSharpFundamentals\01_CSharpFundamentals.csproj", "{D3306D35-F171-49B3-81C7-27B227D8F134}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "01_Calculator", "01_Calculator\01_Calculator.csproj", "{1D294B51-AB6D-44BB-A141-0F72A7F17684}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -15,6 +17,10 @@ Global
 		{D3306D35-F171-49B3-81C7-27B227D8F134}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{D3306D35-F171-49B3-81C7-27B227D8F134}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{D3306D35-F171-49B3-81C7-27B227D8F134}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1D294B51-AB6D-44BB-A141-0F72A7F17684}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1D294B51-AB6D-44BB-A141-0F72A7F17684}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1D294B51-AB6D-44BB-A141-0F72A7F17684}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1D294B51-AB6D-44BB-A141-0F72A7F17684}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
