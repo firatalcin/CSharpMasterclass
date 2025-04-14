@@ -124,5 +124,93 @@ bool IsLong(string input)
 //Parsing a string to an int
 
 string numberAsText = "123";
-int parsedToInt = int.Parse(numberAsText); 
+int parsedToInt = int.Parse(numberAsText);
+
+
+//String interpolation
+
+int a = 4, b = 2, c = 10;
+Console.WriteLine(
+    "First is: " + a + ", second is: " + b + ", third is: " + c);
+
+Console.WriteLine(
+    $"First is: {a}, second is: {b}, third is: {c}");
+
+Console.WriteLine(
+    $"Sum is: {a + b + c}, second is: {b}, third is: {c}");
+
+
+//Switch statement
+
+char ConvertPointsToGrade(int points)
+{
+    switch (points)
+    {
+        case 10:
+        case 9:
+            return 'A';
+        case 8:
+        case 7:
+        case 6:
+            return 'B';
+        case 5:
+        case 4:
+        case 3:
+            return 'C';
+        case 2:
+        case 1:
+            return 'D';
+        case 0:
+            return 'E';
+        default:
+            return '!';
+    }
+}
+
+//Switch expression with contant pattern
+
+char ConvertPointsToGrade_ConstantPattern(int points)
+{
+    return points switch
+    {
+        10 or 9 => 'A',
+        8 or 7 or 6 => 'B',
+        5 or 4 or 3 => 'C',
+        2 or 1 => 'D',
+        0 => 'E',
+        _ => '!',
+    };
+}
+
+//Switch expression with relational pattern
+
+char ConvertPointsToGrade_RelationalPattern(int points)
+{
+    return points switch
+    {
+        >= 90 => 'A',
+        >= 80 => 'B',
+        >= 50 => 'C',
+        _ => 'D' //anything below 50 gets a D
+    };
+}
+
+
+//While loop
+
+var numberWhileLoop = 0;
+while (numberWhileLoop < 10)
+{
+    numberWhileLoop += 1;
+    Console.WriteLine("Number is: " + numberWhileLoop);
+}
+Console.WriteLine("The loop is finished.");
+
+var someText = "hello";
+while (someText.Length < 15)
+{
+    someText += 'a';
+    Console.WriteLine(someText);
+}
+Console.WriteLine("The loop is finished.");
 
