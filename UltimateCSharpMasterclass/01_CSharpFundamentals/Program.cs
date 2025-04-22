@@ -214,3 +214,168 @@ while (someText.Length < 15)
 }
 Console.WriteLine("The loop is finished.");
 
+
+//###################
+//Do-while loop
+//###################
+string userInputLong;
+do
+{
+    Console.WriteLine(
+        "Enter input longer than 10 letters");
+    userInputLong = Console.ReadLine();
+} while (userInputLong.Length <= 10);
+
+
+
+//###################
+//For loop
+//###################
+for (int i = 0; i < 5; ++i)
+{
+    Console.WriteLine("Loop run " + i);
+}
+for (int i = 10; i >= 5; --i)
+{
+    Console.WriteLine("Loop run " + i);
+}
+Console.WriteLine("The loop is finished");
+
+
+
+//###################
+//Break and continue
+//###################
+for (int i = 0; i < 100; ++i)
+{
+    if (i > 25)
+    {
+        break;
+    }
+    //Console.WriteLine("Loop run " + i);
+}
+
+int userNumber;
+do
+{
+    Console.WriteLine(
+        "Enter a number larger than 10.");
+    var input = Console.ReadLine();
+    if (input == "stop")
+    {
+        break;
+    }
+    bool isParsableToInt = input.All(char.IsDigit);
+    if (!isParsableToInt)
+    {
+        userNumber = 0;
+        continue;
+    }
+    userNumber = int.Parse(input);
+} while (userNumber <= 10);
+
+for (int i = 0; i < 20; i++)
+{
+    if (i % 3 == 0)
+    {
+        continue;
+    }
+    //Console.WriteLine(i);
+}
+
+
+
+//###################
+//Nested loops
+//###################
+for (int i = 0; i < 4; i++)
+{
+    for (int j = 0; j < 3; j++)
+    {
+        Console.WriteLine(
+            $"i is {i}, j is {j}");
+    }
+}
+
+
+
+//###################
+//Arrays
+//###################
+var numbers = new int[] { 1, 2, 4, 7, 2 };
+numbers[2] = 10;
+var firstFromEnd1 = numbers[numbers.Length - 1];
+var firstFromEnd2 = numbers[^1];
+var secondFromEnd1 = numbers[numbers.Length - 2];
+var secondFromEnd2 = numbers[^2];
+
+int sumOfNumbers = 0;
+for (int i = 0; i < numbers.Length; i++)
+{
+    sumOfNumbers += numbers[i];
+}
+
+
+
+//###################
+//Multi-dimensional arrays
+//###################
+char[,] letters = new char[2, 3];
+letters[0, 0] = 'A';
+letters[0, 1] = 'B';
+letters[0, 2] = 'C';
+letters[1, 0] = 'D';
+letters[1, 1] = 'E';
+letters[1, 2] = 'F';
+
+var letters2 = new char[,]
+{
+    {'A', 'B','C' },
+    {'D', 'E','F' },
+};
+
+var height = letters.GetLength(0);
+var width = letters.GetLength(1);
+
+for (int i = 0; i < height; i++)
+{
+    Console.WriteLine($"i is {i}");
+    for (int j = 0; j < width; j++)
+    {
+        Console.WriteLine($"j is {j}");
+        Console.WriteLine(
+            $"element is {letters[i, j]}");
+    }
+}
+
+
+
+
+//###################
+//Foreach loop
+//###################
+var words = new string[] { "one", "two", "three" };
+foreach (var word in words)
+{
+    Console.WriteLine(word);
+}
+
+
+
+
+//###################
+//Lists
+//###################
+var someWords = new List<string>
+{
+    "one", "two"
+};
+someWords.Add("three");
+someWords.AddRange(new[] { "four", "five" });
+someWords.Remove("three");
+someWords.RemoveAt(0);
+var indexOfFive = someWords.IndexOf("five");
+bool containsOne = someWords.Contains("one");
+someWords.Clear();
+
+
