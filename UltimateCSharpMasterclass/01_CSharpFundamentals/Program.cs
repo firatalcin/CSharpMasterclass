@@ -379,3 +379,50 @@ bool containsOne = someWords.Contains("one");
 someWords.Clear();
 
 
+//###################
+//Out parameter
+//###################
+var variousNumbers = new int[] { 10, -8, 2, 12, -17 };
+int countOfNonPositiveNumbers;
+var onlyPositive = GetOnlyPositive(
+    numbers, out countOfNonPositiveNumbers);
+
+List<int> GetOnlyPositive(
+    int[] numbers, out int countOfNonPositive)
+{
+    var result = new List<int>();
+    countOfNonPositive = 0;
+    foreach (var number in numbers)
+    {
+        if (number > 0)
+        {
+            result.Add(number);
+        }
+        else
+        {
+            ++countOfNonPositive;
+        }
+    }
+    return result;
+}
+
+//###################
+//Out parameter
+//###################
+bool isParsed = int.TryParse(
+    userInput, out int userInputParsedToInt);
+if (isParsed)
+{
+    Console.WriteLine(
+        "Parsed successfully, the result is: " + userInputParsedToInt);
+}
+else
+{
+    Console.WriteLine(
+        $"Could not parse '{userInput}' to int");
+}
+
+
+Console.WriteLine("Press any key to close");
+Console.ReadKey();
+
