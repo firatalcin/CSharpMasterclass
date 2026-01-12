@@ -12,7 +12,7 @@ if (File.Exists(path))
 }
 else
 {
-       Console.WriteLine("Names file does not yet exist.");
+    Console.WriteLine("Names file does not yet exist.");
     //let's imagine they are given by the user
     names.AddName("John");
     names.AddName("not a valid name");
